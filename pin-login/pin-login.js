@@ -29,8 +29,12 @@ class PinLogin {
             keyEl.classList.add("pin-login__key");
             keyEl.classList.toggle("material-icons", isNaN(key));
             keyEl.textContent = key;
-            keyEl.addEventListener("click", () => {this._handleKeyPress(key)});
-            this.el.numPad.appendChild(document.createElement("br"));
+            keyEl.addEventListener("click", () => {this._handleKeyPress(key) });
+            this.el.numPad.appendChild(keyEl);
+
+            if (insertBreak) {
+                this.el.numPad.appendChild(document.createElement("br"));
+            }
         });
 
     }
@@ -66,6 +70,7 @@ class PinLogin {
                     },
                     body: `pincode=${this.value}`
                 }).then(response => {
+                    console.log(response.status);
                     if (response.status === 200) {
                         window.location.href = this.redirectTo;
                     } else {
