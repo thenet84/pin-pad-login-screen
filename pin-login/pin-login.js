@@ -66,9 +66,9 @@ class PinLogin {
                 fetch(this.loginEndpoint, {
                     method: "post",
                     headers: {
-                        "Content-Type": "application/x-www-forum-urlencoded"
+                        "Content-Type": "application/json"
                     },
-                    body: `pincode=${this.value}`
+                    body: JSON.stringify({pincode: this.value})
                 }).then(response => {
                     console.log(response.status);
                     if (response.status === 200) {

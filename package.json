@@ -1,0 +1,27 @@
+{
+  "name": "pin-pad-login-screen",
+  "version": "1.0.0",
+  "description": "PIN Pad Login Screen in JavaScript - HTML, CSS &amp; JavaScript Tutorial (Project Video)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daynielbatista/pin-pad-login-screen.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daynielbatista/pin-pad-login-screen/issues"
+  },
+  "homepage": "https://github.com/daynielbatista/pin-pad-login-screen#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
